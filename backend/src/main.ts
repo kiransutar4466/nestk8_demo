@@ -19,18 +19,6 @@ async function bootstrap() {
     credentials: true,
   });
 
-  // app.enableCors({
-  //   origin: true, // or true to allow all origins
-  //   methods: ['GET', 'POST', 'PUT', 'DELETE'],
-  //   allowedHeaders: ['Content-Type', 'Authorization'],
-  //   credentials: true,
-  // });
-
-  // app.enableCors({
-  //   origin: true,
-  //   methods: '*',
-  //   credentials: true,
-  // });
 
   app.enableShutdownHooks();
   const options = new DocumentBuilder()
@@ -43,7 +31,6 @@ async function bootstrap() {
   const document = SwaggerModule.createDocument(app, options);
   SwaggerModule.setup(SWAGGER_API_ROOT, app, document);
 
-  //enabled class-validator validations
   app.useGlobalPipes(
     new ValidationPipe({ whitelist: true, forbidNonWhitelisted: true }),
   );

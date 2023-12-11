@@ -36,7 +36,7 @@ export class UserService {
         '🚀 ~ file: user.service.ts:27 ~ UserService ~ registerUser ~ password:',
         password,
       );
-      userDetails.password = await bcrypt.hash(password, 10); // 10 is the number of salt rounds
+      userDetails.password = await bcrypt.hash(password, 10);
 
       const UserObject = await this.prisma.user.create({
         data: {

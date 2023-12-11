@@ -18,7 +18,7 @@ export class AuthController {
       .loginService(loginDetails)
       .then((data) => res.send(data))
       .catch((error) => {
-        const statusCode = error.response?.statusCode || 500; // Use a default status code if undefined
+        const statusCode = error.response?.statusCode || 500; 
         const errorMessage = error.response?.message || 'Internal Server Error';
         return res.status(statusCode).send(errorMessage);
       });

@@ -93,7 +93,7 @@ describe('UserService', () => {
           body: {
             emailType: 'Login Password',
             toAddresses: userDetails.email,
-            password: expect.stringMatching(/[A-Za-z0-9]{10}/), // Adjust the pattern as needed
+            password: expect.stringMatching(/[A-Za-z0-9]{10}/),
             user: `${userDetails.firstName} ${userDetails.lastName}`,
             from: 'ramalondhe11@gmail.com',
           },
