@@ -4,7 +4,7 @@ import RegistrationForm from "../../components/Form";
 import api from "../../api";
 import { toast } from "react-toastify";
 
-const Content = () => {
+const DashBoard = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isViewModalOpen, setIsViewModalOpen] = useState(false);
   const [iseditModalOpen, setIsEditModalOpen] = useState(false);
@@ -254,4 +254,4 @@ const Content = () => {
   );
 };
 
-export default Content;
+export default DashBoard;
