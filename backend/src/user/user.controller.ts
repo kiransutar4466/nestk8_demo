@@ -26,10 +26,6 @@ export class UserController {
   })
   @ApiResponse({ status: 201, description: 'User Register Successfully.' })
   async registerUser(@Body() userDetails: RegisterUserDto) {
-    console.log(
-      '🚀 ~ file: user.controller.ts:29 ~ UserController ~ registerUser ~ userDetails:',
-      userDetails,
-    );
     return await this.userService.registerUser(userDetails);
   }
 

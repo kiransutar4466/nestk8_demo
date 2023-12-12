@@ -21,10 +21,6 @@ export class AuthService {
           email: loginDetails.email,
         },
       });
-      console.log(
-        '🚀 ~ file: auth.service.ts:21 ~ AuthService ~ loginService ~ user:',
-        user,
-      );
 
       if (!user) {
         throw new NotFoundException('User does not exist!');

@@ -32,10 +32,7 @@ export class UserService {
       }
 
       const password = await generateRandomPassword(10);
-      console.log(
-        '🚀 ~ file: user.service.ts:27 ~ UserService ~ registerUser ~ password:',
-        password,
-      );
+    
       userDetails.password = await bcrypt.hash(password, 10);
 
       const UserObject = await this.prisma.user.create({
@@ -58,11 +55,6 @@ export class UserService {
 
       return { message: 'User Registration successfully' };
     } catch (error) {
-      console.log(
-        '🚀 ~ file: user.service.ts:8 ~ UserService ~ registerUser ~ error:',
-        error,
-      );
-
       throw new BadRequestException(error.message);
     }
   }
@@ -71,10 +63,6 @@ export class UserService {
     try {
       return this.prisma.user.findMany();
     } catch (error) {
-      console.log(
-        '🚀 ~ file: user.service.ts:66 ~ UserService ~ GetAllUserService ~ error:',
-        error,
-      );
       throw new BadRequestException(error.message);
     }
   }
@@ -95,10 +83,6 @@ export class UserService {
 
       return { message: 'User Deleted Successfully.' };
     } catch (error) {
-      console.log(
-        '🚀 ~ file: user.service.ts:90 ~ UserService ~ deleteUserService ~ error:',
-        error,
-      );
       throw new BadRequestException(error.message);
     }
   }
@@ -118,10 +102,6 @@ export class UserService {
         data: userDetails,
       });
     } catch (error) {
-      console.log(
-        '🚀 ~ file: user.service.ts:110 ~ UserService ~ updateUserService ~ error:',
-        error,
-      );
       throw new BadRequestException(error.message);
     }
   }
@@ -140,10 +120,6 @@ export class UserService {
 
       return user;
     } catch (error) {
-      console.log(
-        '🚀 ~ file: user.service.ts:115 ~ UserService ~ getUserByIdService ~ error:',
-        error,
-      );
       throw new BadRequestException(error.message);
     }
   }
