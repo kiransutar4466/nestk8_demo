@@ -1,0 +1,32 @@
+# Exclude node_modules directory
+node_modules
+
+# Exclude any files with .env extension
+*.env
+
+# Exclude logs and temporary files
+logs
+tmp
+
+# Exclude development or build artifacts
+dist
+build
+
+# Exclude version control directories
+.git
+.svn
+
+# Exclude editor-specific files
+.vscode
+.idea
+
+# Exclude test files and directories
+test
+tests
+__tests__
+
+# Exclude Docker-specific files
+Dockerfile
+.dockerignore
+.docker
+docker-compose.yml

@@ -1,0 +1,13 @@
+lib
+backend/node_modules
+frontend/node_modules
+
+# Coverage directory used by tools like istanbul
+coverage
+
+# nyc test coverage
+junit.xml
+frontend/.env
+backend/.env
+
+.npmrc

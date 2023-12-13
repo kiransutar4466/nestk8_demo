@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: nestk8-demo
+spec:
+  selector:
+    app: nestk8-demo
+  ports:
+    - protocol: TCP
+      port: 3000
+  type: LoadBalancer

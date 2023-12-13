@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nestk8-demo
+spec:
+  selector:
+    matchLabels:
+      app: nestk8-demo
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: nestk8-demo
+    spec:
+      containers:
+        - name: nestk8-demo
+          image: kiransutar27/nestk8-demo
+          ports:
+            - containerPort: 3000
